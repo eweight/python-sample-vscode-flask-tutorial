@@ -10,8 +10,8 @@ pool:
   name: UbuntuVM
 strategy:
   matrix:
-    Python37:
-      python.version: '3.7'
+    Python312:
+      python.version: '3.12'
 
 steps:
 
