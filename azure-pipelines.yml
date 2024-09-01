@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: default
+  name: UbuntuVM
 strategy:
   matrix:
     Python27:
