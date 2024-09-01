@@ -11,9 +11,15 @@ pool:
 strategy:
   matrix:
     Python37:
-      python.version: '3.x'
+      python.version: '3.7'
 
 steps:
+
+- task: Bash@3
+  inputs:
+    targetType: inline
+    script: echo "##vso[task.setvariable variable=LD_LIBRARY_PATH;]:{TOOLCACHE_PATH}/Python/{VERSION}/x64/lib/"
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
